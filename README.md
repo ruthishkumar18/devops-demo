@@ -25,7 +25,7 @@ git init
 git add .
 git commit -m "Initial commit - Python project with GitHub Actions CI"
 git branch -M main
-git remote add origin <your-repo-url>
+git remote add origin https://github.com/ruthishkumar18/devops-demo.git
 git push -u origin main
 ```
 
