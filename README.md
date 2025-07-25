@@ -44,75 +44,11 @@ devops-demo/
 ```
 
 ---
-
-## ⚙️ GitHub Actions Workflow (`python-app.yml`)
-
-Here’s a basic workflow to run Python tests automatically:
-
-```yaml
-name: Python CI
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pytest
-
-    - name: Run tests
-      run: pytest
-```
-
----
-
 ## ✅ Running the CI
 
 1. Push the code to your GitHub repository.
 2. Go to the **Actions** tab in your GitHub repo.
 3. The workflow will automatically trigger and show the test results.
-
----
-
-## 📂 Example `main.py`
-
-```python
-def add(a, b):
-    return a + b
-
-if __name__ == "__main__":
-    print("Sum:", add(2, 3))
-```
-
----
-
-## 🧪 Example `test_main.py`
-
-```python
-from main import add
-
-def test_add():
-    assert add(2, 3) == 5
-    assert add(-1, 1) == 0
-```
-
----
 
 ## 🚀 Outcome
 
